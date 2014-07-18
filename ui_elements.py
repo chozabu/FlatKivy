@@ -229,9 +229,9 @@ class FlatToggleButton(ToggleButtonBehavior,
     def on_touch_down(self, touch):
         if self.no_up:
             if self.collide_point(touch.x, touch.y) and self.state == 'normal':
-                super(FlatToggleButton, self).on_touch_down(touch)
+                return super(FlatToggleButton, self).on_touch_down(touch)
         else:
-            super(FlatToggleButton, self).on_touch_down(touch)
+            return super(FlatToggleButton, self).on_touch_down(touch)
 
 class FlatCheckBox(TouchRippleBehavior, CheckBox):
     check = ObjectProperty(None)
